@@ -44,6 +44,6 @@ class RealEstatesController < ApplicationController
     end
 
     def real_estate_params
-      params.require(:real_estate).permit(:price, :description, :state, :address, :longitude, :latitude, :kind)
+      params.require(:real_estate).permit(:price, :description, :state, :address, :longitude, :latitude, :kind, :picture)
     end
 end

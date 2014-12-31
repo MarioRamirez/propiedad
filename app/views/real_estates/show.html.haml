@@ -11,8 +11,13 @@
           ="$ "
           =@real_estate.price
   .col-md-12
-    %p
-      -if @real_estate.description.empty?
-        ="Sin información"
-      -else
-        =@real_estate.description
+    .row
+      .col-md-6
+        =image_tag(@real_estate.picture_url) if @real_estate.picture.present?
+      .col-md-6
+        %p
+        -if @real_estate.description.empty?
+          ="Sin información"
+        -else
+          =@real_estate.description        
+    
