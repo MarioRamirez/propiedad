@@ -1,0 +1,14 @@
+.row
+  .col-md-3
+    Imagen
+  .col-md-9
+    .row
+      .col-md-6
+        %span.label.label-success=real_estate.kind
+      .col-md-6
+        %p=real_estate.price
+      .col-md-12
+        %p= link_to real_estate.address, real_estate_path(real_estate) 
+      .col-md-12
+        =link_to "Detalles", real_estate_path(real_estate), class:"btn btn-primary pull-right"
+%hr
